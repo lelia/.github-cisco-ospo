@@ -4,6 +4,13 @@ on:
   schedule:
     - cron: "0 0 * * 0"
   workflow_call:
+    inputs:
+        days-before-stale:
+          required: false
+          type: number
+        days-before-close:
+          required: false
+          type: number
 
 jobs:
   stale:
