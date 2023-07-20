@@ -1,12 +1,6 @@
 name: stale
 
-permissions:
-  issues: write
-  pull-requests: write
-
 on:
-  schedule:
-    - cron: "0 0 * * 0"
   workflow_call:
     inputs:
         days-before-stale:
@@ -19,9 +13,6 @@ on:
 jobs:
   stale:
     runs-on: ubuntu-latest
-    # permissions:
-    #   issues: write
-    #   pull-requests: write
     steps:
       - name: 📆 mark stale activity
         uses: actions/stale@v8
