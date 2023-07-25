@@ -10,6 +10,10 @@ on:
           required: false
           type: number
 
+env:
+  DAYS_BEFORE_STALE: ${{ inputs.days-before-stale || 7 }}
+  DAYS_BEFORE_CLOSE: ${{ inputs.days-before-close || 15 }}
+
 jobs:
   stale:
     runs-on: ubuntu-latest
