@@ -6,16 +6,26 @@ on:
     paths:
       - org/**
   workflow_dispatch:
+    inputs:
+        force-sync:
+            type: boolean
+            required: false
 
 jobs:
   sync:
     name: sync-develop
     runs-on: ubuntu-latest
+    permissions: read-all
     steps:
     - uses: actions/checkout@v3
+    - uses: ./.github/workflows/lint.yml
+    - name: 🌵 dry run
+      uses: ./.github/workflows/peribolos.yml
+      with:
+        confirm: false
     - name: 🔄 sync branch
       uses: connor-baer/action-sync-branch@v1.0.3
       with:
         branch: main
         token: ${{ secrets.SERVICE_ACCOUNT_TOKEN }}
-        force: false
+        force: ${{ inputs.force-sync || false }}
