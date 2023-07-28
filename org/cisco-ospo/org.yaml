@@ -1,0 +1,35 @@
+---
+admins:
+  - detiber
+  - justaugustus
+  - lelia
+  - openclarity-service
+  - svrnm
+billing_email: ospo-billing@cisco.com
+company: '@cisco-open'
+default_repository_permission: read
+description: Open Source Program Office @ Cisco
+email: ospo-billing@cisco.com
+has_organization_projects: true
+has_repository_projects: true
+members:
+  - le1ia
+members_can_create_repositories: true
+name: cisco-ospo
+teams:
+  org-admins:
+    description: Admins for Cisco OSPO organization
+    maintainers:
+      - detiber
+      - justaugustus
+      - lelia
+      - openclarity-service
+      - svrnm
+    privacy: closed
+  project-maintainers:
+    description: Maintainers of Cisco OSPO projects
+    maintainers:
+      - le1ia
+      - lelia
+    members: []
+    privacy: closed
