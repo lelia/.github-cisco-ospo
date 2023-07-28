@@ -28,27 +28,21 @@ jobs:
         run: echo "${{ secrets.SERVICE_ACCOUNT_TOKEN }}" > token
       - name: 🚮 dump config
         if: inputs.dump != ''
-        run: 'echo "Dumping peribolos config for: ${{ inputs.dump }}"'
-      # - name: 🚮 dump config
-      #   if: inputs.dump != ''
-      #   uses: docker://ghcr.io/uwu-tools/peribolos:v0.0.4
-      #   with:
-      #     github-token-path: ./token
-      #     dump: ${{ inputs.dump }}
+        uses: docker://ghcr.io/uwu-tools/peribolos:v0.0.4
+        with:
+          github-token-path: ./token
+          dump: ${{ inputs.dump }}
       - name: 🔄 run peribolos
         if: inputs.confirm == true || false
-        run: 'echo "Running peribolos with confirm: ${{ inputs.confirm }}"'
-      # - name: 🔄 run peribolos
-      #   if: inputs.confirm == true || false
-      #   uses: docker://ghcr.io/uwu-tools/peribolos:v0.0.4
-      #   with:
-      #     github-token-path: ./token
-      #     config-path: org
-      #     required-admins: ${{ env.ADMIN_LIST }}
-      #     min-admins: ${{ env.ADMIN_COUNT }}
-      #     require-self: true
-      #     fix-org: true
-      #     fix-org-members: true
-      #     fix-teams: true
-      #     fix-team-members: true
-      #     confirm: ${{ inputs.confirm || false }}
+        uses: docker://ghcr.io/uwu-tools/peribolos:v0.0.4
+        with:
+          github-token-path: ./token
+          config-path: org
+          required-admins: ${{ env.ADMIN_LIST }}
+          min-admins: ${{ env.ADMIN_COUNT }}
+          require-self: true
+          fix-org: true
+          fix-org-members: true
+          fix-teams: true
+          fix-team-members: true
+          confirm: ${{ inputs.confirm || false }}
