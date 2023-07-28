@@ -1,0 +1,25 @@
+name: dry-run
+
+on:
+  push:
+    branches: [develop]
+    paths:
+      - org/**
+  workflow_dispatch:
+    inputs:
+        force-sync:
+            type: boolean
+            required: false
+
+jobs:
+  lint:
+    uses: ./.github/workflows/_lint.yml
+  peribolos:
+    uses: ./.github/workflows/_peribolos.yml
+    permissions: read-all
+    with:
+      confirm: false
+  sync:
+    uses: ./.github/workflows/_sync.yml
+    with:
+      force: false
