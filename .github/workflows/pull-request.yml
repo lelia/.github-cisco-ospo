@@ -1,0 +1,13 @@
+name: pull-request
+
+on:
+  pull_request:
+    branches-ignore:
+      - main
+      - develop
+    paths:
+      - org/**
+
+jobs:
+  lint:
+    uses: ./.github/workflows/lint.yml
