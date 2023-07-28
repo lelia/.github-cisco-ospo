@@ -5,7 +5,7 @@ on:
 
 jobs:
   dump:
-    uses: ./.github/workflows/peribolos.yml
+    uses: ./.github/workflows/_peribolos.yml
     permissions: read-all
     with:
       dump: cisco-ospo
