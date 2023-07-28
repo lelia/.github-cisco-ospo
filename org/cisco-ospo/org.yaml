@@ -29,7 +29,7 @@ teams:
   project-maintainers:
     description: Maintainers of Cisco OSPO projects
     maintainers:
-      - le1ia
       - lelia
-    members: []
+    members:
+      - le1ia
     privacy: closed
