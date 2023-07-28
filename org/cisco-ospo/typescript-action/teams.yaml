@@ -1,0 +1,22 @@
+---
+teams:
+  typescript-action-admins:
+    description: ''
+    maintainers:
+      - detiber
+      - justaugustus
+      - lelia
+      - openclarity-service
+      - svrnm
+    members: []
+    privacy: closed
+    repos:
+      typescript-action: admin
+  typescript-action-maintainers:
+    description: ''
+    maintainers:
+      - lelia
+    members: []
+    privacy: closed
+    repos:
+      typescript-action: maintain

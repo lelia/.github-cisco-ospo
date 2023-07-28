@@ -1,0 +1,11 @@
+name: dump-config
+
+on:
+  workflow_dispatch:
+
+jobs:
+  dump:
+    uses: ./.github/workflows/peribolos.yml
+    permissions: read-all
+    with:
+      dump: cisco-ospo

@@ -1,0 +1,23 @@
+---
+teams:
+  demo-repository-admins:
+    description: Demo repository admins
+    maintainers:
+      - detiber
+      - justaugustus
+      - lelia
+      - openclarity-service
+      - svrnm
+    members: []
+    privacy: closed
+    repos:
+      demo-repository: admin
+  demo-repository-maintainers:
+    description: Demo repository maintainers
+    maintainers:
+      - lelia
+      - le1ia
+    members: []
+    privacy: closed
+    repos:
+      demo-repository: maintain

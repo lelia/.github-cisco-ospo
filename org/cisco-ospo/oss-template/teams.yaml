@@ -1,0 +1,22 @@
+---
+teams:
+  oss-template-admins:
+    description: ''
+    maintainers:
+      - detiber
+      - justaugustus
+      - lelia
+      - openclarity-service
+      - svrnm
+    members: []
+    privacy: closed
+    repos:
+      oss-template: admin
+  oss-template-maintainers:
+    description: ''
+    maintainers:
+      - lelia
+    members: []
+    privacy: closed
+    repos:
+      oss-template: maintain
