@@ -34,7 +34,7 @@ jobs:
           github-token-path: ./token
           dump: ${{ inputs.dump }}
       - name: 🔄 run peribolos
-        if: inputs.confirm == true || false
+        if: inputs.confirm == true || inputs.confirm == false
         uses: docker://ghcr.io/uwu-tools/peribolos:v0.0.4
         with:
           github-token-path: ./token
