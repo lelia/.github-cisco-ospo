@@ -18,10 +18,12 @@ jobs:
     needs: lint
     uses: ./.github/workflows/_peribolos.yml
     permissions: read-all
+    secrets: inherit
     with:
       confirm: false
   sync:
     needs: peribolos
     uses: ./.github/workflows/_sync.yml
+    secrets: inherit
     with:
       force: false

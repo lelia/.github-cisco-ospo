@@ -17,5 +17,6 @@ jobs:
     needs: lint
     uses: ./.github/workflows/_peribolos.yml
     permissions: read-all
+    secrets: inherit
     with:
       confirm: true
