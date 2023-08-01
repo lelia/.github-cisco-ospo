@@ -6,11 +6,11 @@ on:
       days-until-stale:
         type: number
         required: false
-        default: 10
+        default: 15
       days-until-close:
         type: number
         required: false
-        default: 20
+        default: 30
       stale-label:
         type: string
         required: false
