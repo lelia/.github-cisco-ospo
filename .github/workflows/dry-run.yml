@@ -12,18 +12,22 @@ on:
             required: false
 
 jobs:
-  lint:
+  lint-yaml:
     uses: ./.github/workflows/_lint.yml
-  peribolos:
-    needs: lint
-    uses: ./.github/workflows/_peribolos.yml
+  dry-run:
+    needs: lint-yaml
+    uses: ./.github/workflows/_sync.yml
     permissions: read-all
     secrets: inherit
     with:
       confirm: false
-  sync:
-    needs: peribolos
-    uses: ./.github/workflows/_sync.yml
-    secrets: inherit
-    with:
-      force: false
+  sync-branch:
+    needs: dry-run
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔄 sync branch
+        uses: connor-baer/action-sync-branch@v1.0.3
+        with:
+          token: ${{ secrets.SERVICE_ACCOUNT_TOKEN }}
+          branch: main
+          force: false

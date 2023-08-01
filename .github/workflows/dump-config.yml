@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  dump:
-    uses: ./.github/workflows/_peribolos.yml
+  dump-config:
+    uses: ./.github/workflows/_sync.yml
     permissions: read-all
     secrets: inherit
     with:
