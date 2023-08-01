@@ -1,4 +1,4 @@
-name: peribolos
+name: _peribolos
 
 on:
   workflow_call:
@@ -17,7 +17,6 @@ env:
 
 jobs:
   peribolos:
-    name: run-peribolos
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

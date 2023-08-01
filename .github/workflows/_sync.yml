@@ -1,4 +1,4 @@
-name: sync
+name: _sync
 
 on:
   workflow_call:
