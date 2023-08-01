@@ -4,8 +4,9 @@ on:
   workflow_call:
     inputs:
       force:
-        required: false
         type: boolean
+        required: false
+        default: false
 
 jobs:
   sync:
@@ -16,4 +17,4 @@ jobs:
         with:
           branch: main
           token: ${{ secrets.SERVICE_ACCOUNT_TOKEN }}
-          force: ${{ inputs.force || false }}
+          force: ${{ inputs.force }}

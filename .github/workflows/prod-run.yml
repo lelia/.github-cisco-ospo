@@ -5,14 +5,16 @@ on:
     branches: [main]
     paths:
       - org/**
-  schedule:
-    - cron:  '0 * * * *'
+  # TODO: Re-enable schedule
+  # schedule:
+  #   - cron:  '0 * * * *'
   workflow_dispatch:
 
 jobs:
   lint:
     uses: ./.github/workflows/_lint.yml
   run:
+    needs: lint
     uses: ./.github/workflows/_peribolos.yml
     permissions: read-all
     with:

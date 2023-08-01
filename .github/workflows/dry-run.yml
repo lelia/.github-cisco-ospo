@@ -15,11 +15,13 @@ jobs:
   lint:
     uses: ./.github/workflows/_lint.yml
   peribolos:
+    needs: lint
     uses: ./.github/workflows/_peribolos.yml
     permissions: read-all
     with:
       confirm: false
   sync:
+    needs: peribolos
     uses: ./.github/workflows/_sync.yml
     with:
       force: false

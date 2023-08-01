@@ -4,14 +4,14 @@ on:
   workflow_call:
     inputs:
         confirm:
-            required: false
             type: boolean
-        dump:
             required: false
+            default: false
+        dump:
             type: string
+            required: false
 
 env:
-    API_TOKEN: ${{ secrets.SERVICE_ACCOUNT_TOKEN }}
     ADMIN_LIST: "detiber,justaugustus,lelia,openclarity-service,svrnm"
     ADMIN_COUNT: 5
 
@@ -26,7 +26,7 @@ jobs:
         with:
           egress-policy: audit
       - name: 🔑 set token
-        run: echo "${{ env.API_TOKEN }}" > token
+        run: echo "${{ secrets.SERVICE_ACCOUNT_TOKEN }}" > token
       - name: 🚮 dump config
         if: inputs.dump != ''
         uses: docker://ghcr.io/uwu-tools/peribolos:v0.0.4
@@ -46,4 +46,4 @@ jobs:
           fix-org-members: true
           fix-teams: true
           fix-team-members: true
-          confirm: ${{ inputs.confirm || false }}
+          confirm: ${{ inputs.confirm }}
