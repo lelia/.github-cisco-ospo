@@ -8,7 +8,7 @@ admins:
 billing_email: ospo-billing@cisco.com
 company: '@cisco-open'
 default_repository_permission: read
-description: Open Source Program Office @ Cisco
+description: Open Source Program Office for @cisco-open
 email: ospo-billing@cisco.com
 has_organization_projects: true
 has_repository_projects: true
