@@ -9,4 +9,4 @@ jobs:
     permissions: read-all
     secrets: inherit
     with:
-      dump: cisco-ospo
+      dump: openclarity
