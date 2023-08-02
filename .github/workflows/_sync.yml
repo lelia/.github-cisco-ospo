@@ -16,7 +16,7 @@ env:
     ADMIN_COUNT: 5
 
 jobs:
-  sync-org:
+  sync:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
