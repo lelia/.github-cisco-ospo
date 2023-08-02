@@ -10,11 +10,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint:
+  lint-yaml:
     uses: ./.github/workflows/_lint.yml
-  run:
-    needs: lint
-    uses: ./.github/workflows/_peribolos.yml
+  sync-org:
+    needs: lint-yaml
+    uses: ./.github/workflows/_sync.yml
     permissions: read-all
     secrets: inherit
     with:
