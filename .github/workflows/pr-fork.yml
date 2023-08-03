@@ -1,0 +1,18 @@
+name: dry-run
+
+on:
+  pull_request_review:
+    types: [submitted]
+  pull_request_target:
+    paths:
+      - org/**
+
+jobs:
+  only-runs-when-approved:
+    if: github.event.review.state == 'approved'
+    runs-on: ubuntu-latest
+    steps:
+        - name: hello
+          run: echo "Hello world! This should only run if PR is approved"
+#   lint-yaml:
+#     uses: ./.github/workflows/_lint.yml
