@@ -10,6 +10,7 @@ on:
       dump:
         type: string
         required: false
+        default: ''
 
 env:
   ADMIN_LIST: "detiber,justaugustus,lelia,openclarity-service,svrnm"
