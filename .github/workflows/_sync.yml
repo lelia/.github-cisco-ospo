@@ -3,17 +3,17 @@ name: _sync
 on:
   workflow_call:
     inputs:
-        confirm:
-            type: boolean
-            required: false
-            default: false
-        dump:
-            type: string
-            required: false
+      confirm:
+        type: boolean
+        required: false
+        default: false
+      dump:
+        type: string
+        required: false
 
 env:
-    ADMIN_LIST: "detiber,justaugustus,lelia,openclarity-service,svrnm"
-    ADMIN_COUNT: 5
+  ADMIN_LIST: "detiber,justaugustus,lelia,openclarity-service,svrnm"
+  ADMIN_COUNT: 5
 
 jobs:
   sync:

@@ -1,33 +1,20 @@
 name: dry-run
 
 on:
-  push:
-    branches: [develop]
-    paths:
-      - org/**
-  workflow_dispatch:
-    inputs:
-        force:
-            type: boolean
-            required: false
+  pull_request_review:
+    types: [submitted]
+  pull_request_target:
+    branches-ignore: [main]
+    paths: [org/**]
 
 jobs:
   lint-yaml:
+    if: github.event.review.state == 'approved' && github.repository.owner != 'openclarity'
     uses: ./.github/workflows/_lint.yml
   dry-run:
-    needs: lint-yaml
+    if: github.event.review.state == 'approved' && github.repository.owner != 'openclarity'
     uses: ./.github/workflows/_sync.yml
     permissions: read-all
     secrets: inherit
     with:
       confirm: false
-  sync-branch:
-    needs: dry-run
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🔄 sync branch
-        uses: connor-baer/action-sync-branch@v1.0.3
-        with:
-          token: ${{ secrets.SERVICE_ACCOUNT_TOKEN }}
-          branch: main
-          force: false
