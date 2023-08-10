@@ -7,14 +7,15 @@ on:
     types: [opened, synchronize, reopened]
     branches-ignore: [main]
     paths: [org/**]
-    
 
 jobs:
   lint-yaml:
-    if: github.event.review.state == 'approved' && github.repository.owner != 'openclarity'
+    # if: github.event.review.state == 'approved' && github.repository.owner != 'openclarity'
+    if: github.event.review.state == 'approved' && github.repository.owner != 'cisco-ospo'
     uses: ./.github/workflows/_lint.yml
   dry-run:
-    if: github.event.review.state == 'approved' && github.repository.owner != 'openclarity'
+    # if: github.event.review.state == 'approved' && github.repository.owner != 'openclarity'
+    if: github.event.review.state == 'approved' && github.repository.owner != 'cisco-ospo'
     uses: ./.github/workflows/_sync.yml
     permissions: read-all
     secrets: inherit
