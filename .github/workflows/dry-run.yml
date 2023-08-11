@@ -1,21 +1,16 @@
 name: dry-run
 
 on:
-  pull_request_review:
-    types: [submitted]
-  pull_request_target:
-    types: [opened, synchronize, reopened]
-    branches-ignore: [main]
-    paths: [org/**]
+  push:
+    branches: [develop]
+    paths:
+      - org/**
+  workflow_dispatch:
 
 jobs:
   lint-yaml:
-    # if: github.event.review.state == 'approved' && github.repository.owner != 'openclarity'
-    if: github.event.review.state == 'approved' && github.repository.owner != 'cisco-ospo'
     uses: ./.github/workflows/_lint.yml
   dry-run:
-    # if: github.event.review.state == 'approved' && github.repository.owner != 'openclarity'
-    if: github.event.review.state == 'approved' && github.repository.owner != 'cisco-ospo'
     uses: ./.github/workflows/_sync.yml
     permissions: read-all
     secrets: inherit
