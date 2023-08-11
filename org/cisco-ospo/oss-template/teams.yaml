@@ -16,7 +16,7 @@ teams:
     description: ''
     maintainers:
       - lelia
-    members:[]
+    members: []
     privacy: closed
     repos:
       oss-template: maintain
