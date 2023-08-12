@@ -6,7 +6,10 @@ on:
     paths:
       - org/**
   workflow_dispatch:
-
+    inputs:
+      force:
+        type: boolean
+        required: false
 jobs:
   lint-yaml:
     uses: ./.github/workflows/_lint.yml
