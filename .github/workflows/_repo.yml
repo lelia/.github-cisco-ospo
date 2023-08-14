@@ -36,10 +36,6 @@ on:
         required: false
         default: "lelia"
 
-env:
-    REPORT_NAME: "📝 Stale Repository Report"
-    REPORT_PATH: "./stale_repos.md"
-
 jobs:
   repo:
     runs-on: ubuntu-latest
@@ -64,7 +60,7 @@ jobs:
       - name: 📝 create repo report
         uses: peter-evans/create-issue-from-file@v4
         with:
-            title: ${{ env.REPORT_NAME }}
-            content-filepath: ${{ env.REPORT_PATH }}
+            title: "📝 Stale Repository Report: ${{ matrix.org }}"
+            content-filepath: "./stale_repos.md"
             assignees: ${{ inputs.assignee }}
             token: ${{ secrets.GITHUB_TOKEN }}
