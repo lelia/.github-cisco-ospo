@@ -8,6 +8,7 @@ on:
 jobs:
   find-stale:
     uses: ./.github/workflows/_repo.yml
+    secrets: inherit
     with:
       assignee: "lelia"
       inactive: 90
