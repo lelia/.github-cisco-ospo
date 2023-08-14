@@ -9,6 +9,8 @@ jobs:
   find-stale:
     uses: ./.github/workflows/_repo.yml
     secrets: inherit
+    permissions:
+      issues: write
     with:
       assignee: "lelia"
       inactive: 90
