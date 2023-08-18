@@ -3,6 +3,7 @@ admins:
   - detiber
   - justaugustus
   - lelia
+  - natalisucks
   - openclarity-service
   - svrnm
 billing_email: ospo-billing@cisco.com
@@ -23,6 +24,7 @@ teams:
       - detiber
       - justaugustus
       - lelia
+      - natalisucks
       - openclarity-service
       - svrnm
     privacy: closed
@@ -30,6 +32,5 @@ teams:
     description: Maintainers of Cisco OSPO projects
     maintainers:
       - lelia
-    members:
-      - le1ia
+    members: []
     privacy: closed
