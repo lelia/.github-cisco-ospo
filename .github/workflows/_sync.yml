@@ -13,9 +13,8 @@ on:
         default: ''
 
 env:
-  # TODO: Update admin list once org invite confirmed
-  ADMIN_LIST: "detiber,justaugustus,lelia,openclarity-service,svrnm"
-  ADMIN_COUNT: 5
+  ADMIN_LIST: "detiber,justaugustus,lelia,natalisucks,openclarity-service,svrnm"
+  ADMIN_COUNT: 6
 
 jobs:
   sync:
@@ -47,4 +46,5 @@ jobs:
           fix-org-members: true
           fix-teams: true
           fix-team-members: true
+          fix-team-repos: true
           confirm: ${{ inputs.confirm }}
