@@ -28,9 +28,3 @@ teams:
       - openclarity-service
       - svrnm
     privacy: closed
-  project-maintainers:
-    description: Maintainers of Cisco OSPO projects
-    maintainers:
-      - lelia
-    members: []
-    privacy: closed
