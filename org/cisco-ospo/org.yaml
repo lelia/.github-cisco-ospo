@@ -28,3 +28,6 @@ teams:
       - openclarity-service
       - svrnm
     privacy: closed
+    repos:
+      .github: admin
+      .github-private: admin
