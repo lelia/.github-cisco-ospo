@@ -20,13 +20,17 @@
     },
     "cisco-open": {
       "included": [
-        "inclusive-language"
+        "flame",
+        "inclusive-language",
+        "flame",
       ],
       "excluded": []
     },
     "cisco-ospo": {
       "included": [
-        "dummy-project"
+        "dummy-project",
+        "typescript-action",
+        "oss-template"
       ],
       "excluded": []
     }
