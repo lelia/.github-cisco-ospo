@@ -28,9 +28,7 @@
     },
     "cisco-ospo": {
       "included": [
-        "dummy-project",
-        "typescript-action",
-        "oss-template"
+        "dummy-project"
       ],
       "excluded": []
     }
