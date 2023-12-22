@@ -25,7 +25,9 @@
       "excluded": []
     },
     "cisco-ospo": {
-      "included": [],
+      "included": [
+        "oss-template"
+      ],
       "excluded": []
     }
   }
