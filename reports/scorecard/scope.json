@@ -23,6 +23,10 @@
         "inclusive-language"
       ],
       "excluded": []
+    },
+    "cisco-ospo": {
+      "included": [],
+      "excluded": []
     }
   }
 }
