@@ -33,7 +33,9 @@ jobs:
           # The token is needed to create issues, discovery mode and pushing changes in files
           github-token: ${{ secrets.GITHUB_TOKEN }}
           discovery-enabled: true
-          discovery-orgs: 'cisco,cisco-open,cisco-ospo'
+          # NOTE: temporarily removing cisco-ospo from orgs list
+          # discovery-orgs: 'cisco,cisco-open,cisco-ospo'
+          discovery-orgs: 'cisco,cisco-open'
       - name: Print the scores
         run: |
           echo '${{ steps.openssf-scorecard-monitor.outputs.scores }}'
