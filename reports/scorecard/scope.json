@@ -27,9 +27,7 @@
       "excluded": []
     },
     "cisco-ospo": {
-      "included": [
-        "dummy-project"
-      ],
+      "included": [],
       "excluded": []
     }
   }
