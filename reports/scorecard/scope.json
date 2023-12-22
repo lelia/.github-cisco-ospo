@@ -20,9 +20,9 @@
     },
     "cisco-open": {
       "included": [
+        "DeepVision",
         "flame",
         "inclusive-language",
-        "flame",
       ],
       "excluded": []
     },
