@@ -22,7 +22,7 @@
       "included": [
         "DeepVision",
         "flame",
-        "inclusive-language",
+        "inclusive-language"
       ],
       "excluded": []
     },
