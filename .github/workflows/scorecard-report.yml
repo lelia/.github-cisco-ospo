@@ -10,7 +10,8 @@ on:
 permissions:
   # Write access in order to update the local files with the reports
   contents: write
-  pull-requests: none 
+  # For testing inaccessible resource failures at PR creation stage
+  pull-requests: write
   # Write access in order to create issues
   issues: write
   packages: none
