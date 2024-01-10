@@ -14,13 +14,15 @@
         "oraf",
         "webex-assistant-sdk",
         "mercury",
-        "zepster"
+        "zepster",
+        "thor"
       ],
       "excluded": []
     },
     "cisco-open": {
       "included": [
-        "inclusive-language"
+        "inclusive-language",
+        "jalapeno"
       ],
       "excluded": []
     }
