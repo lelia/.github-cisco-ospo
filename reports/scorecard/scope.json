@@ -2,7 +2,6 @@
   "github.com": {
     "cisco": {
       "included": [
-        "thor",
         "libsrtp",
         "openh264",
         "node-jose",
@@ -21,7 +20,6 @@
     },
     "cisco-open": {
       "included": [
-        "jalapeno",
         "inclusive-language"
       ],
       "excluded": []
