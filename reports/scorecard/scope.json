@@ -2,6 +2,7 @@
   "github.com": {
     "cisco": {
       "included": [
+        "thor",
         "libsrtp",
         "openh264",
         "node-jose",
@@ -14,15 +15,14 @@
         "oraf",
         "webex-assistant-sdk",
         "mercury",
-        "zepster",
-        "thor"
+        "zepster"
       ],
       "excluded": []
     },
     "cisco-open": {
       "included": [
-        "inclusive-language",
-        "jalapeno"
+        "jalapeno",
+        "inclusive-language"
       ],
       "excluded": []
     }
