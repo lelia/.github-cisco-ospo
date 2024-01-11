@@ -1,4 +1,4 @@
-name: "OpenSSF Scorecard reporting"
+name: scorecard-report
 on: 
   # Scheduled trigger
   schedule:
@@ -10,7 +10,7 @@ on:
 permissions:
   # Write access in order to update the local files with the reports
   contents: write
-  # For testing inaccessible resource failures at PR creation stage
+  # Write access in order to create PRs
   pull-requests: write
   # Write access in order to create issues
   issues: write
@@ -22,7 +22,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: OpenSSF Scorecard Monitor
-        uses: UlisesGascon/openssf-scorecard-monitor@v2.0.0-beta6
+        # Temporarily using fork of scorecard monitor action
+        uses: lelia/openssf-scorecard-monitor@scope-debug
+        # uses: UlisesGascon/openssf-scorecard-monitor@v2.0.0-beta6
         id: openssf-scorecard-monitor
         with:
           scope: reports/scorecard/scope.json
