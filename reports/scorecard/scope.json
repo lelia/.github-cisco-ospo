@@ -20,7 +20,8 @@
     },
     "cisco-open": {
       "included": [
-        "inclusive-language"
+        "inclusive-language",
+        "sample-project"
       ],
       "excluded": []
     },
