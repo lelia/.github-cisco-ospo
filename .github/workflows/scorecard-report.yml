@@ -33,10 +33,8 @@ jobs:
           auto-commit: false
           auto-push: false
           generate-issue: true
-          # NOTE: Temporarily testing use of alternative token
-          github-token: ${{ secrets.SERVICE_ACCOUNT_TOKEN }}
           # The token is needed to create issues, discovery mode and pushing changes in files
-          # github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           discovery-enabled: true
           discovery-orgs: 'cisco,cisco-open,cisco-ospo'
       - name: Print the scores
