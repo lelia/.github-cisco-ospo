@@ -158,6 +158,14 @@
           "date": "2023-12-05T07:24:45Z",
           "commit": "31325a4c20aa57978b6c455cfc7267bdd5c6366e"
         }
+      },
+      "sample-project": {
+        "previous": [],
+        "current": {
+          "score": 5,
+          "date": "2024-01-11",
+          "commit": "c9f2e5eb60af95ceaa84903fe3fb3f19a5aa663f"
+        }
       }
     },
     "cisco-ospo": {
