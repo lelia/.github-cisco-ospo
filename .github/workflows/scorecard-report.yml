@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: OpenSSF Scorecard Monitor
-        # Temporarily using fork of scorecard monitor action
+        # NOTE: Temporarily using fork of scorecard monitor action
         uses: lelia/openssf-scorecard-monitor@scope-debug
         # uses: UlisesGascon/openssf-scorecard-monitor@v2.0.0-beta6
         id: openssf-scorecard-monitor
@@ -33,12 +33,12 @@ jobs:
           auto-commit: false
           auto-push: false
           generate-issue: true
+          # NOTE: Temporarily testing use of alternative token
+          github-token: ${{ secrets.SERVICE_ACCOUNT_TOKEN }}
           # The token is needed to create issues, discovery mode and pushing changes in files
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # github-token: ${{ secrets.GITHUB_TOKEN }}
           discovery-enabled: true
-          # NOTE: temporarily removing cisco-ospo from orgs list
-          # discovery-orgs: 'cisco,cisco-open,cisco-ospo'
-          discovery-orgs: 'cisco,cisco-open'
+          discovery-orgs: 'cisco,cisco-open,cisco-ospo'
       - name: Print the scores
         run: |
           echo '${{ steps.openssf-scorecard-monitor.outputs.scores }}'
