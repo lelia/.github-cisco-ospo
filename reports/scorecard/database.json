@@ -159,6 +159,16 @@
           "commit": "31325a4c20aa57978b6c455cfc7267bdd5c6366e"
         }
       }
+    },
+    "cisco-ospo": {
+      "dummy-project": {
+        "previous": [],
+        "current": {
+          "score": 4.4,
+          "date": "2024-01-09",
+          "commit": "5b73398a3c4f382c842fdc50e781ee37e650bb93"
+        }
+      }
     }
   }
 }
