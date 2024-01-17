@@ -20,14 +20,13 @@
     },
     "cisco-open": {
       "included": [
-        "inclusive-language",
-        "sample-project"
+        "inclusive-language"
       ],
       "excluded": []
     },
     "cisco-ospo": {
       "included": [
-        "dummy-project"
+        "sample-project"
       ],
       "excluded": []
     }
