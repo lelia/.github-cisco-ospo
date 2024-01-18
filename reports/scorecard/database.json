@@ -117,12 +117,17 @@
             "score": 5.5,
             "date": "2023-12-18",
             "commit": "e6ac305e35553a654406dcdc7da48cbb73997cfe"
+          },
+          {
+            "score": 5.6,
+            "date": "2023-12-25",
+            "commit": "9a139f5c8ba7629b3c0ac9cc7bbf74e4bf10313a"
           }
         ],
         "current": {
-          "score": 5.6,
-          "date": "2023-12-25",
-          "commit": "9a139f5c8ba7629b3c0ac9cc7bbf74e4bf10313a"
+          "score": 5.9,
+          "date": "2024-01-15",
+          "commit": "1742c3d98674a225b5fd9cb6b3441040f3dea2a4"
         }
       },
       "webex-assistant-sdk": {
@@ -175,6 +180,14 @@
           "score": 4.4,
           "date": "2024-01-09",
           "commit": "5b73398a3c4f382c842fdc50e781ee37e650bb93"
+        }
+      },
+      "sample-project": {
+        "previous": [],
+        "current": {
+          "score": 4.4,
+          "date": "2024-01-17",
+          "commit": "38a601b7ed6b722bfbce14506cace5b43c5c04f5"
         }
       }
     }
