@@ -22,9 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: OpenSSF Scorecard Monitor
-        # NOTE: Temporarily using fork of scorecard monitor action
-        uses: lelia/openssf-scorecard-monitor@scope-debug
-        # uses: UlisesGascon/openssf-scorecard-monitor@v2.0.0-beta6
+        uses: UlisesGascon/openssf-scorecard-monitor@v2.0.0-beta7
         id: openssf-scorecard-monitor
         with:
           scope: reports/scorecard/scope.json

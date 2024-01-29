@@ -29,13 +29,13 @@ jobs:
         run: echo "${{ secrets.SERVICE_ACCOUNT_TOKEN }}" > token
       - name: 🚮 dump config
         if: inputs.confirm != true && inputs.dump != ''
-        uses: docker://ghcr.io/uwu-tools/peribolos:v0.0.4
+        uses: docker://ghcr.io/uwu-tools/peribolos:v0.0.7
         with:
           github-token-path: ./token
           dump: ${{ inputs.dump }}
       - name: 🔄 run peribolos
         if: (inputs.confirm == true || inputs.confirm == false) && inputs.dump == ''
-        uses: docker://ghcr.io/uwu-tools/peribolos:v0.0.4
+        uses: docker://ghcr.io/uwu-tools/peribolos:v0.0.7
         with:
           github-token-path: ./token
           config-path: org
