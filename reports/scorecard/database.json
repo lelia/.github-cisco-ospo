@@ -20,12 +20,17 @@
             "score": 5,
             "date": "2023-12-11",
             "commit": "fd66e67ac6136aff80b1567488568ba1ed7e8fb8"
+          },
+          {
+            "score": 5.6,
+            "date": "2023-12-18",
+            "commit": "cfbd5896606b91638c8871ee91776dee31625bd5"
           }
         ],
         "current": {
-          "score": 5.6,
-          "date": "2023-12-18",
-          "commit": "cfbd5896606b91638c8871ee91776dee31625bd5"
+          "score": 5.3,
+          "date": "2024-01-22",
+          "commit": "4f01c15b2199daf16924caa53f77a52e8b559260"
         }
       },
       "mindmeld": {
@@ -61,11 +66,16 @@
             "score": 3.6,
             "date": "2023-12-18",
             "commit": "246075f836094272b605d1ecd630cb63b6ba5596"
+          },
+          {
+            "score": 3.5,
+            "date": "2024-01-08",
+            "commit": "246075f836094272b605d1ecd630cb63b6ba5596"
           }
         ],
         "current": {
-          "score": 3.5,
-          "date": "2024-01-08",
+          "score": 3.2,
+          "date": "2024-01-22",
           "commit": "246075f836094272b605d1ecd630cb63b6ba5596"
         }
       },
@@ -157,10 +167,16 @@
     },
     "cisco-open": {
       "inclusive-language": {
-        "previous": [],
+        "previous": [
+          {
+            "score": 8.5,
+            "date": "2023-12-05T07:24:45Z",
+            "commit": "31325a4c20aa57978b6c455cfc7267bdd5c6366e"
+          }
+        ],
         "current": {
-          "score": 8.5,
-          "date": "2023-12-05T07:24:45Z",
+          "score": 8.4,
+          "date": "2024-01-23T07:24:42Z",
           "commit": "31325a4c20aa57978b6c455cfc7267bdd5c6366e"
         }
       },
