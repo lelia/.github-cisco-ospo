@@ -9,20 +9,19 @@ on:
         required: false
         default: true
 
-# Declare default permissions as read-only
-permissions: read-all
+permissions:
+    # Required for GitHub OIDC token (if publish_results: true)
+    id-token: write
+    # Required for code scanning (GitHub CodeQL) alerts
+    security-events: write
 
 env:
+  # Filename for SARIF results artifact
   RESULTS_PATH: "results.sarif"
 
 jobs:
   scorecard:
     runs-on: ubuntu-latest
-    permissions:
-      # Required for GitHub OIDC token (if publish_results: true)
-      id-token: write
-      # Required for code scanning (GitHub CodeQL) alerts
-      security-events: write
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
