@@ -205,6 +205,14 @@
           "date": "2024-01-17",
           "commit": "38a601b7ed6b722bfbce14506cace5b43c5c04f5"
         }
+      },
+      ".github": {
+        "previous": [],
+        "current": {
+          "score": 5.5,
+          "date": "2024-01-30T22:48:48Z",
+          "commit": "b159f62c71e61dc3cf819828ddb4499a6f5bae2a"
+        }
       }
     }
   }
