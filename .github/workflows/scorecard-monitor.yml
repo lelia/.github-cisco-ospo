@@ -1,5 +1,5 @@
-name: scorecard-report
-on: 
+name: scorecard-monitor
+on:
   # Scheduled trigger
   schedule:
     # Run every Sunday at 00:00
@@ -16,16 +16,18 @@ permissions:
   issues: write
   packages: none
 
+env:
+  ORG_LIST: "cisco,cisco-open,cisco-ospo"
+  TARGET_BRANCH: "develop"
+
 jobs:
-  security-scoring:
+  scorecard-monitor:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: OpenSSF Scorecard Monitor
-        # NOTE: Temporarily using fork of scorecard monitor action
-        uses: lelia/openssf-scorecard-monitor@scope-debug
-        # uses: UlisesGascon/openssf-scorecard-monitor@v2.0.0-beta6
-        id: openssf-scorecard-monitor
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - name: "🔍 run scorecard monitor"
+        uses: UlisesGascon/openssf-scorecard-monitor@v2.0.0-beta7
+        id: scorecard-monitor
         with:
           scope: reports/scorecard/scope.json
           database: reports/scorecard/database.json
@@ -36,18 +38,18 @@ jobs:
           # The token is needed to create issues, discovery mode and pushing changes in files
           github-token: ${{ secrets.GITHUB_TOKEN }}
           discovery-enabled: true
-          discovery-orgs: 'cisco,cisco-open,cisco-ospo'
-      - name: Print the scores
+          discovery-orgs: ${{ env.ORG_LIST }}
+      - name: "🖨️ print the scores"
         run: |
-          echo '${{ steps.openssf-scorecard-monitor.outputs.scores }}'
-      - name: Create pull request
+          echo '${{ steps.scorecard-monitor.outputs.scores }}'
+      - name: ":octocat: create pull request"
         uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38 # v5.0.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: OpenSSF Scorecard Report Updated
-          title: OpenSSF Scorecard Report Updated
-          body: OpenSSF Scorecard Report Updated
-          base: develop
+          commit-message: Add latest results to Scorecard Monitor report
+          title: 🔍 Scorecard Monitor Report Update
+          body: This pull request has been automatically filed by Scorecard Monitor.
+          base: ${{ env.TARGET_BRANCH }}
           assignees: ${{ github.actor }}
-          branch: openssf-scorecard-report-updated
+          branch: scorecard-monitor-report-update
           delete-branch: true
