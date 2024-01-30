@@ -32,15 +32,18 @@ jobs:
         with:
           results_file: ${{ env.RESULTS_PATH }}
           results_format: sarif
-          # Publish the results for public repositories to enable Scorecard badges: https://github.com/ossf/scorecard-action#publishing-results
-          # For private repositories, `publish_results` will automatically be set to `false`, regardless of the value entered here
+          # Publish the results for public repositories to enable Scorecard badges: 
+          # https://github.com/ossf/scorecard-action#publishing-results
+          # For private repositories, `publish_results` will automatically be set to `false`
+          # regardless of the value entered here
           publish_results: true
           # (Optional) fine-grained personal access token (PAT)
-          # Uncomment the `repo_token` line below if you want to enable the Branch-Protection check on a *public* repository
-          # To create the PAT, follow the steps in https://github.com/ossf/scorecard-action#authentication-with-fine-grained-pat-optional
+          # Uncomment the `repo_token` line below if you want to enable the Branch-Protection check
+          # on a *public* repository. To create the PAT, follow the steps in: 
+          # https://github.com/ossf/scorecard-action#authentication-with-fine-grained-pat-optional
           # repo_token: ${{ secrets.SCORECARD_TOKEN }}
-      # (Optional) Upload the results as SARIF artifacts: https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning
-      # Commenting out will disable uploads of run results in SARIF format to the repository Actions tab
+      # (Optional) Upload the results as SARIF artifacts
+      # Commenting out will disable uploads of run results in SARIF format to the Actions tab
       - name: ⏫ upload sarif artifact
         uses: actions/upload-artifact@26f96dfa697d77e81fd5907df203aa23a56210a8 # v4.3.0
         with:
