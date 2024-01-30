@@ -17,6 +17,8 @@ jobs:
   run-scorecard:
     # Call reusable workflow file
     uses: ./.github/workflows/_scorecard.yml
+    permissions: read-all
+    secrets: inherit
     with:
       # Publish results of Scorecard analysis
       publish-results: true
