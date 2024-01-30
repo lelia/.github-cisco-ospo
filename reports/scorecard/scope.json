@@ -26,7 +26,8 @@
     },
     "cisco-ospo": {
       "included": [
-        "sample-project"
+        "sample-project",
+        ".github"
       ],
       "excluded": []
     }
