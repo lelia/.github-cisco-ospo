@@ -18,7 +18,9 @@ permissions:
 
 env:
   ORG_LIST: "cisco,cisco-open,cisco-ospo"
-  TARGET_BRANCH: "develop"
+  # Temporarily changing default branch
+  # TARGET_BRANCH: "develop"
+  TARGET_BRANCH: "main"
 
 jobs:
   scorecard-monitor:
