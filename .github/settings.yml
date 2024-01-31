@@ -69,7 +69,7 @@ teams:
     permission: admin
 
 branches:
-  - name: develop
+  - name: main
     # https://developer.github.com/v3/repos/branches/#update-branch-protection
     # Branch Protection settings. Set to null to disable
     protection:
