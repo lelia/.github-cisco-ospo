@@ -30,7 +30,7 @@ jobs:
           # https://github.com/ossf/scorecard-action#publishing-results
           # For private repositories, `publish_results` will automatically be set to `false`
           # regardless of the value entered here
-          publish_results: true
+          publish_results: ${{ inputs.publish-results }}
           # (Optional) fine-grained personal access token (PAT)
           # Uncomment the `repo_token` line below if you want to enable the Branch-Protection check
           # on a *public* repository. To create the PAT, follow the steps in: 
