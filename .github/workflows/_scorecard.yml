@@ -9,6 +9,9 @@ on:
         required: false
         default: true
 
+# Declare default permissions as read-only
+permissions: read-all
+
 jobs:
   scorecard:
     runs-on: ubuntu-latest
