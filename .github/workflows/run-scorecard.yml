@@ -4,8 +4,6 @@ on:
   push:
     branches:
       # Run on pushes to default branch
-      # - develop
-      # Temporarily changing default branch
       - main
   schedule:
     # Run weekly on Saturdays

@@ -8,23 +8,25 @@ on:
   workflow_dispatch:
 
 permissions:
-  # Write access in order to update the local files with the reports
-  contents: write
-  # Write access in order to create PRs
-  pull-requests: write
-  # Write access in order to create issues
-  issues: write
+  contents: none
+  pull-requests: none
+  issues: none
   packages: none
 
 env:
   ORG_LIST: "cisco,cisco-open,cisco-ospo"
-  # Temporarily changing default branch
-  # TARGET_BRANCH: "develop"
   TARGET_BRANCH: "main"
 
 jobs:
   scorecard-monitor:
     runs-on: ubuntu-latest
+    permissions:
+      # Required to update local files with the reports
+      contents: write
+      # Required to create pull requests
+      pull-requests: write
+      # Required to create issues
+      issues: write
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - name: 🔍 run scorecard monitor
@@ -37,7 +39,7 @@ jobs:
           auto-commit: false
           auto-push: false
           generate-issue: true
-          # The token is needed to create issues, discovery mode and pushing changes in files
+          # Required to create issues, discovery mode, push changes in files
           github-token: ${{ secrets.GITHUB_TOKEN }}
           discovery-enabled: true
           discovery-orgs: ${{ env.ORG_LIST }}
