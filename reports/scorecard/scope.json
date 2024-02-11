@@ -75,7 +75,8 @@
     "cisco-ospo": {
       "included": [
         "sample-project",
-        ".github"
+        ".github",
+        "oss-template"
       ],
       "excluded": []
     }
