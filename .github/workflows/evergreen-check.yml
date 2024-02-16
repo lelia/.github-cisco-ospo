@@ -2,8 +2,8 @@ name: evergreen-check
 on:
   # Scheduled trigger
   schedule:
-    # Run once a month
-    - cron: "3 2 1 * *"
+    # Run weekly on Saturdays
+    - cron: "30 1 * * 6"
   # Manual trigger
   workflow_dispatch:
 
@@ -20,7 +20,8 @@ jobs:
         # Required to create issues
         issues: write
     steps:
-      - shell: bash
+      - name: 📅 calculate date
+        shell: bash
         run: |
           # Get the current date
           CURRENT_DATE=$(date +'%Y-%m-%d')
