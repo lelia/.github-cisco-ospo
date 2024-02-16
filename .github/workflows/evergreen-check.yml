@@ -28,7 +28,7 @@ jobs:
           PREVIOUS_DATE=$(date -d "$CURRENT_DATE -7 day" +'%Y-%m-%d')
           echo "$PREVIOUS_DATE..$CURRENT_DATE"
           # Create env variable for next step
-          echo "ONE_WEEK_AGO=$PREVIOUS_DATE >> "$GITHUB_ENV"
+          echo "ONE_WEEK_AGO=$PREVIOUS_DATE" >> "$GITHUB_ENV"
       - name: 🌲 evergreen check
         uses: github/evergreen@c7f90d59873562e19509fbdb47187ba7c0a8a73e # v1.4.0
         env:
