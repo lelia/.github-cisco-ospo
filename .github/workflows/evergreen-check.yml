@@ -32,7 +32,7 @@ jobs:
           echo "ONE_WEEK_AGO=$PREVIOUS_DATE" >> "$GITHUB_ENV"
       - name: 🌲 evergreen check
         # uses: github/evergreen@c7f90d59873562e19509fbdb47187ba7c0a8a73e # v1.4.0
-        uses: MorganPattersonSignet/evergreen@bf618d157a6af7c13f9acdbf1363fcef18dda172 # for temp debugging
+        uses: lelia/evergreen@debug-eligible-repos # for temp debugging
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ORGANIZATION: cisco-ospo
