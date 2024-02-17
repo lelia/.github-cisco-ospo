@@ -46,6 +46,7 @@ jobs:
 
             📖 Check out the official documentation for configuring Dependabot [here](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file)!
           COMMIT_MESSAGE: ".github: Add Dependabot configuration"
-          CREATED_AFTER_DATE: ${{ env.ONE_WEEK_AGO }}
+          # Disable env var for now
+          # CREATED_AFTER_DATE: ${{ env.ONE_WEEK_AGO }}
           # Enable for testing, will not create any issues/PRs
           DRY_RUN: true
