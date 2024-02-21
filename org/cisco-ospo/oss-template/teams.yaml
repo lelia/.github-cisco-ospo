@@ -3,6 +3,7 @@ teams:
   oss-template-admins:
     description: ''
     maintainers:
+      - cisco-service
       - detiber
       - justaugustus
       - lelia
