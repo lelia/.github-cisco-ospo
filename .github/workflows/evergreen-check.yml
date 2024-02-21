@@ -9,12 +9,15 @@ on:
 
 permissions:
   pull-requests: none
+  contents: none
   issues: none
 
 jobs:
   evergreen-check:
     runs-on: ubuntu-latest
     permissions:
+        # For testing permissions
+        contents: write
         # Required to create pull requests
         pull-requests: write
         # Required to create issues
@@ -34,7 +37,7 @@ jobs:
         # uses: github/evergreen@c7f90d59873562e19509fbdb47187ba7c0a8a73e # v1.4.0
         uses: lelia/evergreen@debug-eligible-repos # for temp debugging
         env:
-          GH_TOKEN: ${{ secrets.SERVICE_ACCOUNT_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ORGANIZATION: cisco-ospo
           EXEMPT_REPOS: "cisco-ospo/.github, cisco-ospo/.allstar"
           TYPE: pull
