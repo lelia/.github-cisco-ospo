@@ -3,6 +3,7 @@ teams:
   typescript-action-admins:
     description: ''
     maintainers:
+      - cisco-service
       - detiber
       - justaugustus
       - lelia
