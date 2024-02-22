@@ -34,8 +34,8 @@ jobs:
           # Create env variable for next step
           echo "ONE_WEEK_AGO=$PREVIOUS_DATE" >> "$GITHUB_ENV"
       - name: 🌲 evergreen check
-        # uses: github/evergreen@c7f90d59873562e19509fbdb47187ba7c0a8a73e # v1.4.0
-        uses: lelia/evergreen@debug-eligible-repos # for temp debugging
+        uses: github/evergreen@48e30102cc0dcea11473636c606c6d75a4c608d2 # v1.5.0
+        # uses: lelia/evergreen@debug-eligible-repos # for temp debugging
         env:
           GH_TOKEN: ${{ secrets.CISCO_SERVICE_TOKEN }}
           ORGANIZATION: cisco-ospo
@@ -50,6 +50,6 @@ jobs:
             📖 Check out the official documentation for configuring Dependabot [here](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file)!
           COMMIT_MESSAGE: ".github: Add Dependabot configuration"
           # Disable env var for now
-          # CREATED_AFTER_DATE: ${{ env.ONE_WEEK_AGO }}
+          CREATED_AFTER_DATE: ${{ env.ONE_WEEK_AGO }}
           # Enable for testing, will not create any issues/PRs
           DRY_RUN: false
