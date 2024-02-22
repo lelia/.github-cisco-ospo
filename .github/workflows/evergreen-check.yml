@@ -34,7 +34,8 @@ jobs:
           # Create env variable for next step
           echo "ONE_WEEK_AGO=$PREVIOUS_DATE" >> "$GITHUB_ENV"
       - name: 🌲 evergreen check
-        uses: github/evergreen@48e30102cc0dcea11473636c606c6d75a4c608d2 # v1.5.0
+        uses: github/evergreen@423c7c3d8adcd4d5105fc32e596fdb567aa8ddeb # slightly older commit for testing
+        # uses: github/evergreen@48e30102cc0dcea11473636c606c6d75a4c608d2 # v1.5.0
         # uses: lelia/evergreen@debug-eligible-repos # for temp debugging
         env:
           GH_TOKEN: ${{ secrets.CISCO_SERVICE_TOKEN }}
