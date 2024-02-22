@@ -33,16 +33,10 @@ jobs:
           results_format: sarif
           # Publish the results for public repositories to enable Scorecard badges: 
           # https://github.com/ossf/scorecard-action#publishing-results
-          # For private repositories, `publish_results` will automatically be set to `false`
-          # regardless of the value entered here
           publish_results: ${{ inputs.publish-results }}
           # (Optional) fine-grained personal access token (PAT)
-          # Uncomment the `repo_token` line below if you want to enable the Branch-Protection check
-          # on a *public* repository. To create the PAT, follow the steps in: 
-          # https://github.com/ossf/scorecard-action#authentication-with-fine-grained-pat-optional
-          # repo_token: ${{ secrets.SCORECARD_TOKEN }}
+          repo_token: ${{ secrets.OPENSSF_SCORECARD_TOKEN }}
       # (Optional) Upload the results as SARIF artifacts
-      # Commenting out will disable uploads of run results in SARIF format to the Actions tab
       - name: ⏫ upload sarif artifact
         uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4.3.1
         with:
