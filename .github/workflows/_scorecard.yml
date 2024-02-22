@@ -35,7 +35,7 @@ jobs:
           # https://github.com/ossf/scorecard-action#publishing-results
           publish_results: ${{ inputs.publish-results }}
           # (Optional) fine-grained personal access token (PAT)
-          repo_token: ${{ secrets.OPENSSF_SCORECARD_TOKEN }}
+          repo_token: ${{ secrets.SCORECARD_TOKEN }}
       # (Optional) Upload the results as SARIF artifacts
       - name: ⏫ upload sarif artifact
         uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4.3.1
