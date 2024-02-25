@@ -68,7 +68,8 @@
         "fso-dashboard-examples",
         "vault-query",
         "hashing-reader-rs",
-        "device-tco-calculator"
+        "device-tco-calculator",
+        "sample-project"
       ],
       "excluded": []
     },
@@ -76,7 +77,8 @@
       "included": [
         "sample-project",
         ".github",
-        "oss-template"
+        "oss-template",
+        "fsoc"
       ],
       "excluded": []
     }
