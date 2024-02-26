@@ -35,11 +35,16 @@
             "score": 5.8,
             "date": "2024-02-05",
             "commit": "c59550a2147c255cc8e09451f6deb96de2526b6d"
+          },
+          {
+            "score": 5.7,
+            "date": "2024-02-12",
+            "commit": "c59550a2147c255cc8e09451f6deb96de2526b6d"
           }
         ],
         "current": {
-          "score": 5.7,
-          "date": "2024-02-12",
+          "score": 5.6,
+          "date": "2024-02-19",
           "commit": "c59550a2147c255cc8e09451f6deb96de2526b6d"
         }
       },
@@ -164,11 +169,17 @@
         }
       },
       "mercury": {
-        "previous": [],
+        "previous": [
+          {
+            "score": 5,
+            "date": "2023-11-27",
+            "commit": "75f6ad629ae7e669f7b0350c4111b2dc121cc204"
+          }
+        ],
         "current": {
-          "score": 5,
-          "date": "2023-11-27",
-          "commit": "75f6ad629ae7e669f7b0350c4111b2dc121cc204"
+          "score": 4.6,
+          "date": "2024-02-19",
+          "commit": "0951db400c3556f3110d294307d61d0071f471e5"
         }
       },
       "zepster": {
@@ -192,20 +203,31 @@
             "score": 8.4,
             "date": "2024-01-23T07:24:42Z",
             "commit": "31325a4c20aa57978b6c455cfc7267bdd5c6366e"
+          },
+          {
+            "score": 8.2,
+            "date": "2024-02-17T01:47:28Z",
+            "commit": "ab7a63d39172899aad6fb043fc573c3ea9537287"
           }
         ],
         "current": {
-          "score": 8.2,
-          "date": "2024-02-17T01:47:28Z",
-          "commit": "ab7a63d39172899aad6fb043fc573c3ea9537287"
+          "score": 8.4,
+          "date": "2024-02-24T01:46:43Z",
+          "commit": "cda6e1c88753e9c07a9955ac4da71213c0d16bb0"
         }
       },
       "sample-project": {
-        "previous": [],
+        "previous": [
+          {
+            "score": 5,
+            "date": "2024-01-11",
+            "commit": "c9f2e5eb60af95ceaa84903fe3fb3f19a5aa663f"
+          }
+        ],
         "current": {
-          "score": 5,
-          "date": "2024-01-11",
-          "commit": "c9f2e5eb60af95ceaa84903fe3fb3f19a5aa663f"
+          "score": 4.7,
+          "date": "2024-02-24T01:42:30Z",
+          "commit": "4f234010a00a0fc47e10401f8e5c4201bc1d7594"
         }
       },
       "full-stack-wellness": {
@@ -252,10 +274,16 @@
         }
       },
       "operator-tools": {
-        "previous": [],
+        "previous": [
+          {
+            "score": 7.2,
+            "date": "2024-01-29",
+            "commit": "60cb2c9a9719b573a14c80b47395890e448236da"
+          }
+        ],
         "current": {
-          "score": 7.2,
-          "date": "2024-01-29",
+          "score": 7.1,
+          "date": "2024-02-19",
           "commit": "60cb2c9a9719b573a14c80b47395890e448236da"
         }
       },
@@ -293,10 +321,16 @@
         }
       },
       "test-telemetry-generator": {
-        "previous": [],
+        "previous": [
+          {
+            "score": 6.6,
+            "date": "2024-01-29",
+            "commit": "669cd0131ca6bd1db11c18501885bb772c3cbadf"
+          }
+        ],
         "current": {
-          "score": 6.6,
-          "date": "2024-01-29",
+          "score": 5.9,
+          "date": "2024-02-19",
           "commit": "669cd0131ca6bd1db11c18501885bb772c3cbadf"
         }
       },
@@ -504,12 +538,17 @@
             "score": 6.4,
             "date": "2024-01-29",
             "commit": "7e9565a2585d8efb44dc187fd8e25faa7c06e423"
+          },
+          {
+            "score": 6.8,
+            "date": "2024-02-17T19:06:49Z",
+            "commit": "d5f1a8632263fe8fea0907affc946cf7b98589b9"
           }
         ],
         "current": {
-          "score": 6.8,
-          "date": "2024-02-17T19:06:49Z",
-          "commit": "d5f1a8632263fe8fea0907affc946cf7b98589b9"
+          "score": 8,
+          "date": "2024-02-24T01:45:18Z",
+          "commit": "de356eb3d2d49253a316e62134b2a8732cd205e8"
         }
       },
       "grabit": {
@@ -547,11 +586,16 @@
             "score": 6.7,
             "date": "2024-02-05",
             "commit": "9fb0cf3ce3e2ecd0a5c1d63d280cc8c624b1d33b"
+          },
+          {
+            "score": 6.6,
+            "date": "2024-02-12",
+            "commit": "9fb0cf3ce3e2ecd0a5c1d63d280cc8c624b1d33b"
           }
         ],
         "current": {
-          "score": 6.6,
-          "date": "2024-02-12",
+          "score": 6.4,
+          "date": "2024-02-19",
           "commit": "9fb0cf3ce3e2ecd0a5c1d63d280cc8c624b1d33b"
         }
       },
@@ -663,12 +707,17 @@
             "score": 6.2,
             "date": "2024-02-05",
             "commit": "fe99405d058025e6216d54622ab5f9ecd3371586"
+          },
+          {
+            "score": 5.9,
+            "date": "2024-02-17T01:48:17Z",
+            "commit": "383eae8f4ffb574cb1b2489b0f8d06bcd707e971"
           }
         ],
         "current": {
-          "score": 5.9,
-          "date": "2024-02-17T01:48:17Z",
-          "commit": "383eae8f4ffb574cb1b2489b0f8d06bcd707e971"
+          "score": 5.7,
+          "date": "2024-02-24T01:47:52Z",
+          "commit": "43893fafe5e096b16f719fe115791d3fa84b9313"
         }
       },
       "cloudland2023-advanced-opentelemetry-workshop": {
@@ -713,10 +762,16 @@
         }
       },
       "secure-endpoint-ebpf": {
-        "previous": [],
+        "previous": [
+          {
+            "score": 5,
+            "date": "2024-01-29",
+            "commit": "d042a6c23dffc772fdfd031d4e787f0e0375fb1a"
+          }
+        ],
         "current": {
-          "score": 5,
-          "date": "2024-01-29",
+          "score": 4.8,
+          "date": "2024-02-19",
           "commit": "d042a6c23dffc772fdfd031d4e787f0e0375fb1a"
         }
       },
@@ -808,6 +863,14 @@
           "score": 5.8,
           "date": "2024-02-17T01:44:38Z",
           "commit": "b1641502f1c8794bf9928a52489c6059e40b723d"
+        }
+      },
+      "fsoc": {
+        "previous": [],
+        "current": {
+          "score": 6.7,
+          "date": "2024-02-24T01:45:26Z",
+          "commit": "c40a8a2db11920f80a5e0fee2fb2fee68b7a2e66"
         }
       }
     }
