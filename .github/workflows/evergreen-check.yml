@@ -34,8 +34,7 @@ jobs:
           # Create env variable for next step
           echo "ONE_WEEK_AGO=$PREVIOUS_DATE" >> "$GITHUB_ENV"
       - name: 🌲 evergreen check
-        # uses: github/evergreen@48e30102cc0dcea11473636c606c6d75a4c608d2 # v1.5.0
-        uses: lelia/evergreen@debug-datetime-issue # for temp debugging
+        uses: github/evergreen@b6e56d1ae29adaebd9367b80ac4f1beb67dac69f # v1.6.0
         env:
           GH_TOKEN: ${{ secrets.CISCO_SERVICE_TOKEN }}
           ORGANIZATION: cisco-ospo
@@ -51,5 +50,4 @@ jobs:
           COMMIT_MESSAGE: ".github: Add Dependabot configuration"
           CREATED_AFTER_DATE: ${{ env.ONE_WEEK_AGO }}
           GROUP_DEPENDENCIES: true
-          # Enable for testing, will not create any issues/PRs
-          DRY_RUN: false
+          ENABLE_SECURITY_UPDATES: false
