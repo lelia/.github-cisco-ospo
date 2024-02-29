@@ -3,8 +3,8 @@ name: contributor-report
 on:
   # Scheduled trigger
   schedule:
-    # Run every Sunday at 00:00
-    - cron: "0 0 * * 0"
+    # Run the first day of the month at 00:00
+    - cron: "0 0 1 * *"
   # Manual trigger
   workflow_dispatch:
 
@@ -35,7 +35,6 @@ jobs:
           START_DATE: ${{ env.START_DATE }}
           END_DATE: ${{ env.END_DATE }}
           ORGANIZATION: cisco-ospo
-          LINK_TO_PROFILE: "true"
       - name: 📥 create issue
         uses: peter-evans/create-issue-from-file@24452a72d85239eacf1468b0f1982a9f3fec4c94 # v5.0.0
         with:
