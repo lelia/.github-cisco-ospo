@@ -31,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - name: 🔍 run scorecard monitor
-        uses: UlisesGascon/openssf-scorecard-monitor@8551177324543b39670fe3c430012c946a937bd1 #v2.0.0-beta7
+        uses: UlisesGascon/openssf-scorecard-monitor@8551177324543b39670fe3c430012c946a937bd1 # v2.0.0-beta7
         id: scorecard-monitor
         with:
           scope: reports/scorecard/scope.json
@@ -40,7 +40,6 @@ jobs:
           auto-commit: false
           auto-push: false
           generate-issue: true
-          # Required to create issues, discovery mode, push changes in files
           github-token: ${{ secrets.GITHUB_TOKEN }}
           discovery-enabled: true
           discovery-orgs: ${{ env.ORG_LIST }}
