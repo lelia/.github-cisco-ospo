@@ -1,4 +1,4 @@
-name: Weekly contributor report
+name: contributor-report
 
 on:
   # Scheduled trigger
