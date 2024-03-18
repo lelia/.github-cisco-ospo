@@ -2,9 +2,14 @@ name: app-test
 
 on: [workflow_dispatch]
 
+permissions:
+    issues: none
+
 jobs:
   hello-world:
     runs-on: ubuntu-latest
+    permissions:
+        issues: write
     steps:
       - uses: actions/create-github-app-token@v1
         id: app-token
