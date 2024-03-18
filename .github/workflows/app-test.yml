@@ -15,5 +15,5 @@ jobs:
       - uses: peter-evans/create-or-update-comment@v3
         with:
           token: ${{ steps.app-token.outputs.token }}
-          issue-number: ${{ github.event.issue.number }}
+          issue-number: 117
           body: "Hello, World!"
