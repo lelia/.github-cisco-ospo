@@ -14,8 +14,18 @@ permissions:
 jobs:
   contributor-report:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Define orgs to report contributor activity
+        org:
+          [
+            "cisco",
+            "cisco-open",
+            "cisco-ospo",
+            "openclarity",
+          ]
     permissions:
-        # Required to create issues
+        # Required to create contributor report
         issues: write
     steps:
       - name: 📅 calculate date
@@ -34,11 +44,11 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           START_DATE: ${{ env.START_DATE }}
           END_DATE: ${{ env.END_DATE }}
-          ORGANIZATION: cisco-open
+          ORGANIZATION: ${{ matrix.org }}
       - name: 📥 create issue
         uses: peter-evans/create-issue-from-file@24452a72d85239eacf1468b0f1982a9f3fec4c94 # v5.0.0
         with:
-          title: 📰 Monthly Contributor Report
+          title: "📰 Monthly Contributor Report: ${{ matrix.org }}"
           token: ${{ secrets.GITHUB_TOKEN }}
-          content-filepath: ./contributors.md
+          content-filepath: "./contributors.md"
           assignees: ${{ github.actor }}
