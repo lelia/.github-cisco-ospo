@@ -23,6 +23,7 @@ jobs:
             "cisco-open",
             "cisco-ospo",
             "openclarity",
+            "bank-vaults",
           ]
     permissions:
         # Required to create contributor report
