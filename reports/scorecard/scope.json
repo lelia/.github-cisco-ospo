@@ -71,7 +71,8 @@
         "device-tco-calculator",
         "sample-project",
         "observability-examples",
-        "terraform-provider-observability"
+        "terraform-provider-observability",
+        "synthetic-heart"
       ],
       "excluded": []
     },
